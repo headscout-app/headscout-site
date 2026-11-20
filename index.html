@@ -59,6 +59,7 @@ if(l==="en"){r.classList.add("en");r.lang="en";}})();
   h1{font-size:clamp(56px,9vw,112px)}
   h2{font-size:clamp(46px,7vw,88px)}
   h3{font-size:clamp(28px,3vw,36px)}
+  h1,h2{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
   .lead{font-size:clamp(19px,2vw,23px);max-width:640px;text-wrap:pretty}
   .eyebrow{font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:15px}
   .hl{display:inline-block;padding:.02em .16em .0em;border-radius:6px;transform:rotate(-1.2deg);line-height:1}
@@ -77,7 +78,8 @@ if(l==="en"){r.classList.add("en");r.lang="en";}})();
   /* header */
   header{position:sticky;top:0;z-index:20;background:rgba(31,42,28,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(194,255,110,.12)}
   .bar{display:flex;align-items:center;gap:24px;height:68px}
-  .brand{display:block}.brand .logo{height:26px}
+  .brand{display:block;min-width:0;flex:0 1 221px}.brand .logo{width:100%;height:auto}
+  .lang{flex:none}
   nav{display:flex;gap:26px;margin-left:auto}
   nav a{color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.6px;text-transform:uppercase;opacity:.85}
   nav a:hover{opacity:1;color:var(--lime)}
@@ -516,5 +518,6 @@ if(l==="en"){r.classList.add("en");r.lang="en";}})();
   } else { els.forEach(function(el){el.classList.add("in");}); }
 })();
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
